@@ -9,7 +9,16 @@ public class AirplaneDAO {
     
     public static List<Airplane> getAirplanesFromFee()
     {
+        List<Airplane> airplanes = new ArrayList<>();
         
+        return airplanes;
+    }
+    
+    private static Airplane getAirplaneFromJSONObject()
+    {
+        Airplane airplane = new Airplane();
+        
+        return airplane;
     }
     
 }
