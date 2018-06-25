@@ -92,13 +92,13 @@ public class AirplaneServlet extends HttpServlet {
             
             case "speed":
             {
-                Collections.sort(airplanes, Airplane.SPEED);
+                //Collections.sort(airplanes, Airplane.SPEED);
                 break;
             }
             
             case "year":
             {
-                Collections.sort(airplanes, Airplane.YEAR);
+                //Collections.sort(airplanes, Airplane.YEAR);
                 break;
             }
 
