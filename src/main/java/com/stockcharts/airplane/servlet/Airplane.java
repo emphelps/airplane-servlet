@@ -6,10 +6,10 @@ import org.json.JSONObject;
 public class Airplane {
     
     private int id;
-    private String speed;
+    private float speed;
     private String model;
     private String manufacturer;
-    private String year;
+    private int year;
     
     private String origin;
     private String destination;
@@ -20,7 +20,7 @@ public class Airplane {
         return this;
     }
     
-    public Airplane withSpeed(String speed)
+    public Airplane withSpeed(float speed)
     {
         this.speed = speed;
         return this;
@@ -38,7 +38,7 @@ public class Airplane {
         return this;
     }
     
-    public Airplane withYear(String year)
+    public Airplane withYear(int year)
     {
         this.year = year;
         return this;
@@ -60,7 +60,7 @@ public class Airplane {
         return id;
     }
 
-    public String getSpeed() {
+    public float getSpeed() {
         return speed;
     }
 
@@ -72,7 +72,7 @@ public class Airplane {
         return manufacturer;
     }
 
-    public String getYear() {
+    public int getYear() {
         return year;
     }
     
@@ -105,7 +105,7 @@ public class Airplane {
         @Override
         public int compare(Airplane one, Airplane two)
         {
-            return Float.compare(Float.valueOf(one.speed), Float.valueOf(two.speed));
+            return Float.compare(one.speed, two.speed);
         }
     };
     
@@ -114,7 +114,7 @@ public class Airplane {
         @Override
         public int compare(Airplane one, Airplane two)
         {
-            return Integer.compare(Integer.valueOf(one.year), Integer.valueOf(two.year));
+            return Integer.compare(one.year, two.year);
         }
     };
    
