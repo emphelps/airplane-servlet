@@ -35,10 +35,12 @@ public class AirplaneDAO {
     
     private static Airplane getAirplaneFromJSONObject(JSONObject jo) throws IOException
     {
-        String id = jo.getString("Id");
+        int id = jo.getInt("Id");
+        int year = Integer.valueOf(jo.getString("Year"));
         
         Airplane airplane = new Airplane()
-                .withId(id);
+                .withId(id)
+                .withYear(year);
         
         return airplane;
     }
