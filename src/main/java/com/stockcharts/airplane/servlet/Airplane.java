@@ -13,14 +13,6 @@ public class Airplane {
     
     private String origin;
     private String destination;
-
-    public String getOrigin() {
-        return origin;
-    }
-
-    public String getDestination() {
-        return destination;
-    }
     
     public Airplane withId(int id)
     {
@@ -82,6 +74,14 @@ public class Airplane {
 
     public String getYear() {
         return year;
+    }
+    
+    public String getOrigin() {
+        return origin;
+    }
+
+    public String getDestination() {
+        return destination;
     }
     
     @Override 
