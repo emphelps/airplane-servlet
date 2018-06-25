@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-import java.util.logging.*;
 import org.apache.log4j.Logger;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -62,6 +61,9 @@ public class AirplaneServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
     {
         List<Airplane> airplanes = airplaneCache.getIfPresent("all");
+        
+        
+        System.out.println("in doget");
        
         if(airplanes == null)
         {
