@@ -34,8 +34,8 @@ public class AirplaneDAO {
     private static Airplane getAirplaneFromJSONObject(JSONObject jo) throws IOException
     {
         int id = jo.getInt("Id");
-        String year = jo.optString("Year", "---");
-        String speed = jo.optString("Spd", "---");
+        int year = Integer.valueOf(jo.optString("Year", "---"));
+        float speed = Float.valueOf(jo.optString("Spd", "---"));
         String manufacturer = jo.optString("Man", "---");
         String model = jo.optString("Mdl", "---");
         String origin = jo.optString("From", "---");
