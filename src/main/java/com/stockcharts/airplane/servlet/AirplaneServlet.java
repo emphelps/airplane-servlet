@@ -62,9 +62,6 @@ public class AirplaneServlet extends HttpServlet {
     {
         List<Airplane> airplanes = airplaneCache.getIfPresent("all");
         
-        
-        logger.warn("in doGet!");
-       
         if(airplanes == null)
         {
             try{

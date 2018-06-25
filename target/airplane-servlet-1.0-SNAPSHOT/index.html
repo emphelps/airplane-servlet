@@ -16,14 +16,50 @@
             <table>
                 <tr>
                     <th>ID</th>
-                    <th>MODEL></th>
+                    <th>MODEL</th>
                     <th>MANUFACTURE</th>
                     <th>YEAR</th>
                     <th>SPEED</th>
                 </tr>
+                
+                <tr v-for="airplane in airplanes">
+                    <td> 
+                       {{ airplane.id }}
+                    </td>
+                    
+                    <td> 
+                       {{ airplane.model }}
+                    </td>
+                    
+                    <td> 
+                       {{ airplane.manufacturer }}
+                    </td>
+                    
+                    <td> 
+                       {{ airplane.year }}
+                    </td>
+                    
+                    <td> 
+                       {{ airplane.speed }}
+                    </td>
+                </tr>
+
             </table>
-        </div>
+        </div> 
         
-        
+        <script>
+            
+            var app = new Vue({
+                el: "#app",
+                data: {
+                    airplanes : []
+                }
+            });
+            
+            
+            $.get("servlet", function(response){
+                app.airplanes = response;
+            });
+        </script>
     </body>
 </html>
