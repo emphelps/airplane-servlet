@@ -17,7 +17,7 @@ public class AirplaneDAO {
  
         String responseBody = response.getBody(); 
         JSONObject jo = new JSONObject(response.getBody());
-        JSONArray features = jo.getJSONArray("feeds");
+        JSONArray features = jo.getJSONArray("acList");
         
         logger.warn("json array from json object");
         
@@ -35,7 +35,10 @@ public class AirplaneDAO {
     
     private static Airplane getAirplaneFromJSONObject(JSONObject jo) throws IOException
     {
-        Airplane airplane = new Airplane();
+        String id = jo.getString("Id");
+        
+        Airplane airplane = new Airplane()
+                .withId(id);
         
         return airplane;
     }
