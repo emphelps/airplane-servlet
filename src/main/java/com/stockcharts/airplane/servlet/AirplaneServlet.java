@@ -76,6 +76,44 @@ public class AirplaneServlet extends HttpServlet {
             }
         }
         
+        String requestVal = request.getParameter("sort");
+        
+        logger.debug("requestVal: " + requestVal);
+        
+        if(requestVal == null) requestVal = "";
+        
+        switch(requestVal)
+        {
+            case "id":
+            {
+                Collections.sort(airplanes, Airplane.ID);
+                break;
+            }
+            
+            case "speed":
+            {
+                Collections.sort(airplanes, Airplane.SPEED);
+                break;
+            }
+            
+            case "year":
+            {
+                Collections.sort(airplanes, Airplane.YEAR);
+                break;
+            }
+
+            case "manufacturer":
+            {
+                Collections.sort(airplanes, Airplane.MANUFACTURER);
+                break;
+            }
+
+            default:
+            {
+                break;
+            }
+        }
+        
         logger.debug("airplanes list size: " + airplanes.size());
         JSONArray ja = new JSONArray(airplanes);
         

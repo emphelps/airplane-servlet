@@ -104,6 +104,16 @@
                 el: "#app",
                 data: {
                     airplanes : []
+                },
+                methods : {
+                    
+                    sort(methodToSortBy)
+                    {
+                        var request = "servlet?sort=" + methodToSortBy;
+                        $.get(request, function(response){
+                            app.airplanes = response;
+                        });
+                    }
                 }
             });
             
