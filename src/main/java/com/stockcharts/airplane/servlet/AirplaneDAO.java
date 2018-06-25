@@ -19,11 +19,9 @@ public class AirplaneDAO {
         JSONObject jo = new JSONObject(response.getBody());
         JSONArray features = jo.getJSONArray("acList");
         
-        logger.warn("json array from json object");
-        
         List<Airplane> airplanes = new ArrayList<>();
         
-        for(int i = 0 ; i < features.length(); i++)
+        for(int i = 0 ; i < features.length(); i++) // features.lenght()
         {
             JSONObject o = features.getJSONObject(i);
             
@@ -36,11 +34,39 @@ public class AirplaneDAO {
     private static Airplane getAirplaneFromJSONObject(JSONObject jo) throws IOException
     {
         int id = jo.getInt("Id");
-        int year = Integer.valueOf(jo.getString("Year"));
+        
+        String year = "";
+        if(jo.has("Year"))
+        {
+            year = jo.getString("Year");
+        }
+        
+        float speed = 0;
+        if(jo.has("Spd"))
+        {
+            speed = jo.getFloat("Spd");
+        }
+        
+        String manufacturer = "";
+        if(jo.has("Man"))
+        {
+            manufacturer = jo.getString("Man");
+        }
+        
+        String model = "";
+        if(jo.has("Mdl"))
+        {
+            model = jo.getString("Mdl");
+        }
+        
+        
         
         Airplane airplane = new Airplane()
                 .withId(id)
-                .withYear(year);
+                .withYear(year)
+                .withManufacturer(manufacturer)
+                .withModel(model)
+                .withSpeed(speed);
         
         return airplane;
     }

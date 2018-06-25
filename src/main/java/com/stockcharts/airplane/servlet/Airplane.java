@@ -9,7 +9,7 @@ public class Airplane {
     private float speed;
     private String model;
     private String manufacturer;
-    private int year;
+    private String year;
     
 //    private String origin;
 //    private String destination;
@@ -38,7 +38,7 @@ public class Airplane {
         return this;
     }
     
-    public Airplane withYear(int year)
+    public Airplane withYear(String year)
     {
         this.year = year;
         return this;
@@ -72,7 +72,7 @@ public class Airplane {
         return manufacturer;
     }
 
-    public int getYear() {
+    public String getYear() {
         return year;
     }
     
@@ -83,21 +83,21 @@ public class Airplane {
         return jo.toString();
     }
     
-    public static Comparator<Airplane> SPEED = new Comparator<Airplane>()
-    {
-        @Override
-        public int compare(Airplane one, Airplane two)
-        {
-            return Float.compare(one.speed, two.speed);
-        }
-    };
+//    public static Comparator<Airplane> SPEED = new Comparator<Airplane>()
+//    {
+//        @Override
+//        public int compare(Airplane one, Airplane two)
+//        {
+//            return Float.compare(one.speed, two.speed);
+//        }
+//    };
     
-    public static Comparator<Airplane> YAER = new Comparator<Airplane>()
-    {
-        @Override
-        public int compare(Airplane one, Airplane two)
-        {
-            return Float.compare(one.year, two.year);
-        }
-    };
+//    public static Comparator<Airplane> YEaR = new Comparator<Airplane>()
+//    {
+//        @Override
+//        public int compare(Airplane one, Airplane two)
+//        {
+//            return Float.compare(one.year, two.year);
+//        }
+//    };
 }
