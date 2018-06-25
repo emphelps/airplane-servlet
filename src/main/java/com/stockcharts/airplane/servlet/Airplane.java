@@ -91,21 +91,51 @@ public class Airplane {
         return jo.toString();
     }
     
-//    public static Comparator<Airplane> SPEED = new Comparator<Airplane>()
-//    {
-//        @Override
-//        public int compare(Airplane one, Airplane two)
-//        {
-//            return Float.compare(one.speed, two.speed);
-//        }
-//    };
+    public static Comparator<Airplane> ID = new Comparator<Airplane>()
+    {
+        @Override
+        public int compare(Airplane one, Airplane two)
+        {
+            return Integer.compare(one.id, two.id);
+        }
+    };
     
-//    public static Comparator<Airplane> YEaR = new Comparator<Airplane>()
-//    {
-//        @Override
-//        public int compare(Airplane one, Airplane two)
-//        {
-//            return Float.compare(one.year, two.year);
-//        }
-//    };
+    public static Comparator<Airplane> SPEED = new Comparator<Airplane>()
+    {
+        @Override
+        public int compare(Airplane one, Airplane two)
+        {
+            return Float.compare(Float.valueOf(one.speed), Float.valueOf(two.speed));
+        }
+    };
+    
+   public static Comparator<Airplane> YEAR = new Comparator<Airplane>()
+    {
+        @Override
+        public int compare(Airplane one, Airplane two)
+        {
+            return Integer.compare(Integer.valueOf(one.year), Integer.valueOf(two.year));
+        }
+    };
+   
+   public static Comparator<Airplane> MANUFACTURER = new Comparator<Airplane>()
+    {
+        @Override
+        public int compare(Airplane one, Airplane two)
+        {
+            if (one.manufacturer.equals(two.manufacturer)) 
+            {
+                return 0;
+            }
+            if (one.manufacturer == null) 
+            {
+                return -1;
+            }
+            if (two.manufacturer == null) 
+            {
+                return 1;
+            }
+            return one.manufacturer.compareTo(two.manufacturer);
+        }
+    };
 }
