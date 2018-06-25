@@ -5,7 +5,7 @@ import org.json.JSONObject;
 
 public class Airplane {
     
-    private String id;
+    private int id;
     private float speed;
     private String model;
     private String manufacturer;
@@ -14,7 +14,7 @@ public class Airplane {
 //    private String origin;
 //    private String destination;
     
-    public Airplane withId(String id)
+    public Airplane withId(int id)
     {
         this.id = id;
         return this;
@@ -56,7 +56,7 @@ public class Airplane {
 //        return this;
 //    }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
