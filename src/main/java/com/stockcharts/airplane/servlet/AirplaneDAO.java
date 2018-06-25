@@ -59,12 +59,26 @@ public class AirplaneDAO {
             model = jo.getString("Mdl");
         }
         
+        String origin = "---";
+        if(jo.has("From"))
+        {
+            origin = jo.getString("From");
+        }
+        
+        String destination = "---";
+        if(jo.has("To"))
+        {
+            destination = jo.getString("To");
+        }
+        
         Airplane airplane = new Airplane()
                 .withId(id)
                 .withYear(year)
                 .withManufacturer(manufacturer)
                 .withModel(model)
-                .withSpeed(speed);
+                .withSpeed(speed)
+                .withOrigin(origin)
+                .withDestination(destination);
         
         return airplane;
     }

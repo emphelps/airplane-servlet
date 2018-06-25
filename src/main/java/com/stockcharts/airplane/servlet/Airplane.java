@@ -11,8 +11,16 @@ public class Airplane {
     private String manufacturer;
     private String year;
     
-//    private String origin;
-//    private String destination;
+    private String origin;
+    private String destination;
+
+    public String getOrigin() {
+        return origin;
+    }
+
+    public String getDestination() {
+        return destination;
+    }
     
     public Airplane withId(int id)
     {
@@ -44,17 +52,17 @@ public class Airplane {
         return this;
     }
     
-//    public Airplane withOrigin(String origin)
-//    {
-//        this.origin = origin;
-//        return this;
-//    }
-//    
-//    public Airplane withDestination()
-//    {
-//        this.destination = destination;
-//        return this;
-//    }
+    public Airplane withOrigin(String origin)
+    {
+        this.origin = origin;
+        return this;
+    }
+    
+    public Airplane withDestination(String destination)
+    {
+        this.destination = destination;
+        return this;
+    }
 
     public int getId() {
         return id;

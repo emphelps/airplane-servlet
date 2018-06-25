@@ -51,6 +51,8 @@
                     <th>MODEL</th>
                     <th>YEAR</th>
                     <th>SPEED</th>
+                    <th>FROM</th>
+                    <th>TO</th>
                     </tr>
                 </thead>
                     <tbody>
@@ -73,6 +75,14 @@
 
                             <td> 
                                {{ airplane.speed }}
+                            </td>
+                            
+                            <td> 
+                               {{ airplane.origin }}
+                            </td>
+                            
+                            <td> 
+                               {{ airplane.destination }}
                             </td>
                         </tr>
                     </tbody>
