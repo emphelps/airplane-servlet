@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.stockcharts.airplane.servlet;
 
 import java.io.IOException;
@@ -24,7 +19,7 @@ import org.json.JSONArray;
 
 public class AirplaneServlet extends HttpServlet {
 
-        private static final Logger logger = Logger.getLogger(AirplaneServlet.class.getName());
+    private static final Logger logger = Logger.getLogger(AirplaneServlet.class.getName());
 
     public static final String AIRPLANE_FEED_URL = "https://public-api.adsbexchange.com/VirtualRadar/AircraftList.json?fTypQN=";
 
