@@ -11,7 +11,7 @@ public class AirplaneDAO {
     
     private static final Logger logger = Logger.getLogger(AirplaneDAO.class.getName());
     
-    public static List<Airplane> getAirplanesFromFee() throws IOException
+    public static List<Airplane> getAirplanesFromFeed() throws IOException
     {
         RestResponse response = new RestRequest(AirplaneServlet.AIRPLANE_FEED_URL).doGet();
         
