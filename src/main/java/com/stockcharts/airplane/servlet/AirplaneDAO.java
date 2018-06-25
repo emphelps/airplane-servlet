@@ -13,7 +13,7 @@ public class AirplaneDAO {
     
     public static List<Airplane> getAirplanesFromFeed() throws IOException
     {
-        RestResponse response = new RestRequest(AirplaneServlet.AIRPLANE_FEED_URL).doGet();
+        RestResponse response = new RestRequest(AirplaneApplication.AIRPLANE_FEED_URL).doGet();
  
         String responseBody = response.getBody(); 
         JSONObject jo = new JSONObject(response.getBody());

@@ -109,7 +109,7 @@
                     
                     sort(methodToSortBy)
                     {
-                        var request = "servlet?sort=" + methodToSortBy;
+                        var request = "servlet/data?sort=" + methodToSortBy;
                         $.get(request, function(response){
                             app.airplanes = response;
                         });
@@ -118,7 +118,7 @@
             });
             
             
-            $.get("servlet", function(response){
+            $.get("servlet/data", function(response){
                 app.airplanes = response;
             });
         </script>
