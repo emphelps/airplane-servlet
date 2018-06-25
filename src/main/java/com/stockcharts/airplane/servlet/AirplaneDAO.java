@@ -35,31 +35,29 @@ public class AirplaneDAO {
     {
         int id = jo.getInt("Id");
         
-        String year = "";
+        String year = "---";
         if(jo.has("Year"))
         {
             year = jo.getString("Year");
         }
         
-        float speed = 0;
+        String speed = "---";
         if(jo.has("Spd"))
         {
-            speed = jo.getFloat("Spd");
+            speed = Float.toString(jo.getFloat("Spd"));
         }
         
-        String manufacturer = "";
+        String manufacturer = "---";
         if(jo.has("Man"))
         {
             manufacturer = jo.getString("Man");
         }
         
-        String model = "";
+        String model = "---";
         if(jo.has("Mdl"))
         {
             model = jo.getString("Mdl");
         }
-        
-        
         
         Airplane airplane = new Airplane()
                 .withId(id)

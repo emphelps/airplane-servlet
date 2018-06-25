@@ -6,7 +6,7 @@ import org.json.JSONObject;
 public class Airplane {
     
     private int id;
-    private float speed;
+    private String speed;
     private String model;
     private String manufacturer;
     private String year;
@@ -20,7 +20,7 @@ public class Airplane {
         return this;
     }
     
-    public Airplane withSpeed(float speed)
+    public Airplane withSpeed(String speed)
     {
         this.speed = speed;
         return this;
@@ -60,7 +60,7 @@ public class Airplane {
         return id;
     }
 
-    public float getSpeed() {
+    public String getSpeed() {
         return speed;
     }
 
