@@ -56,17 +56,26 @@
                     </tr>
                 </thead>
                     <tbody>
+                       <tr>
+                        <th><button v-on:click="sort('id')">ID</button></th>
+                        <th><button v-on:click="sort('manufacturer')">MANUFACTURER</button></th>
+                        <th><button v-on:click="sort('model')">MODEL</button></th>
+                        <th><button v-on:click="sort('year')">YEAR</button></th>
+                        <th><button v-on:click="sort('speed')">SPEED</button></th>
+                        <th><button v-on:click="sort('from')">FROM</button></th>
+                        <th><button v-on:click="sort('to')">TO</button></th>
+                       </tr>
                         <tr v-for="airplane in airplanes">
                             <td> 
                                {{ airplane.id }}
                             </td>
 
                             <td> 
-                               {{ airplane.model }}
+                               {{ airplane.manufacturer }}
                             </td>
 
                             <td> 
-                               {{ airplane.manufacturer }}
+                               {{ airplane.model }}
                             </td>
 
                             <td> 
