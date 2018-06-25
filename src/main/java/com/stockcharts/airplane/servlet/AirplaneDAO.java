@@ -3,7 +3,7 @@ package com.stockcharts.airplane.servlet;
 import com.stockcharts.commons.net.*;
 import java.io.IOException;
 import java.util.*;
-import java.util.logging.Logger;
+import org.apache.log4j.Logger;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -14,11 +14,12 @@ public class AirplaneDAO {
     public static List<Airplane> getAirplanesFromFeed() throws IOException
     {
         RestResponse response = new RestRequest(AirplaneServlet.AIRPLANE_FEED_URL).doGet();
-        
-        String responseBody = response.getBody();
-        
+ 
+        String responseBody = response.getBody(); 
         JSONObject jo = new JSONObject(response.getBody());
-        JSONArray features = jo.getJSONArray("features");
+        JSONArray features = jo.getJSONArray("feeds");
+        
+        logger.warn("json array from json object");
         
         List<Airplane> airplanes = new ArrayList<>();
         

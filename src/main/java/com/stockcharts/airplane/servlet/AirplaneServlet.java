@@ -63,12 +63,14 @@ public class AirplaneServlet extends HttpServlet {
         List<Airplane> airplanes = airplaneCache.getIfPresent("all");
         
         
-        System.out.println("in doget");
+        logger.warn("in doGet!");
        
         if(airplanes == null)
         {
             try{
+                logger.warn("in doGet try!");
                 airplanes = AirplaneDAO.getAirplanesFromFeed();
+                logger.warn("got airplanes from DAO");
                 airplaneCache.put("all", airplanes);
             }
             catch(IOException e)
