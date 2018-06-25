@@ -1,9 +1,7 @@
 com/stockcharts/airplane/servlet/Airplane$2.class
 com/stockcharts/airplane/servlet/AirplanesResource.class
 com/stockcharts/airplane/servlet/AirplaneApplication.class
-com/stockcharts/airplane/servlet/Airplane$3.class
 com/stockcharts/airplane/servlet/AirplaneDAO.class
 com/stockcharts/airplane/servlet/Airplane.class
 com/stockcharts/airplane/servlet/AirplaneServlet.class
 com/stockcharts/airplane/servlet/Airplane$1.class
-com/stockcharts/airplane/servlet/Airplane$4.class
