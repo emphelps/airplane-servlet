@@ -10,40 +10,72 @@
         <!-- Vue.js -->
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
         
+        <style>
+            table.paleBlueRows {
+            font-family: "Times New Roman", Times, serif;
+            border: 1px solid #FFFFFF;
+            width: 350px;
+            height: 200px;
+            text-align: center;
+            border-collapse: collapse;
+          }
+
+          table.paleBlueRows td, table.paleBlueRows th {
+            border: 1px solid #FFFFFF;
+            padding: 3px 2px;
+          }
+          table.paleBlueRows tbody td {
+            font-size: 13px;
+          }
+          table.paleBlueRows thead {
+            background: #63BFC2;
+            border-bottom: 5px solid #FFFFFF;
+          }
+          table.paleBlueRows thead th {
+            font-size: 17px;
+            font-weight: bold;
+            color: #000000;
+            text-align: center;
+            border-left: 2px solid #FFFFFF;
+          }
+            
+        </style>
     </head>
     <body>
         <div id="app">
-            <table>
-                <tr>
+            <table id = "table" class = "paleBlueRows">
+                <thead>
+                    <tr>
                     <th>ID</th>
+                    <th>MANUFACTURER</th>
                     <th>MODEL</th>
-                    <th>MANUFACTURE</th>
                     <th>YEAR</th>
                     <th>SPEED</th>
-                </tr>
-                
-                <tr v-for="airplane in airplanes">
-                    <td> 
-                       {{ airplane.id }}
-                    </td>
-                    
-                    <td> 
-                       {{ airplane.model }}
-                    </td>
-                    
-                    <td> 
-                       {{ airplane.manufacturer }}
-                    </td>
-                    
-                    <td> 
-                       {{ airplane.year }}
-                    </td>
-                    
-                    <td> 
-                       {{ airplane.speed }}
-                    </td>
-                </tr>
+                    </tr>
+                </thead>
+                    <tbody>
+                        <tr v-for="airplane in airplanes">
+                            <td> 
+                               {{ airplane.id }}
+                            </td>
 
+                            <td> 
+                               {{ airplane.model }}
+                            </td>
+
+                            <td> 
+                               {{ airplane.manufacturer }}
+                            </td>
+
+                            <td> 
+                               {{ airplane.year }}
+                            </td>
+
+                            <td> 
+                               {{ airplane.speed }}
+                            </td>
+                        </tr>
+                    </tbody>
             </table>
         </div> 
         
